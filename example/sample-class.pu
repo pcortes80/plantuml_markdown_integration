@@ -2,7 +2,7 @@
 TcpServerBase <|-- TcpServerCmd
 TcpServerBase <|-- TcpServerTel
 TcpServerBase <|-- TcpServerEvent
-TcpServerBase <|-- TcpServerEvent3
+TcpServerBase <|-- TcpServerEvent2
 TcpServer *-- TcpServerCmd
 TcpServer *-- TcpServerTel
 @enduml
