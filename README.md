@@ -14,6 +14,7 @@ Set `plantuml:{filename}` as a fence information. `filename` is used as the file
 TcpServerBase <|-- TcpServerCmd
 TcpServerBase <|-- TcpServerTel
 TcpServerBase <|-- TcpServerEvent
+TcpServerBase <|-- TcpServerEvent2
 TcpServer *-- TcpServerCmd
 TcpServer *-- TcpServerTel
 @enduml
