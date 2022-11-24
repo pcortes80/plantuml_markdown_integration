@@ -1,16 +1,19 @@
-name: 'Generate Plantuml'
-description: 'Generate uml diagrams with Plantuml Server and push them to your repository.'
-author: 'grassedge'
-inputs:
-  path:
-    description: 'path to directory which generated svg is stored'
-    default: '.'
-  message:
-    description: 'the commit message when committing generated images'
-    default: 'Render PlantUML files'
-runs:
-  using: 'node12'
-  main: 'dist/index.js'
-branding:
-  icon: 'image'
-  color: 'gray-dark'
+name: generate plantuml
+on: push
+jobs:
+  generate_plantuml:
+    runs-on: ubuntu-latest
+    name: plantuml
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: plantuml
+      id: plantuml
+      uses: grassedge/generate-plantuml-action@v1.5
+      with:
+        path: example
+        message: "Render PlantUML files"
+      env:
+        GITHUB_TOKEN: ${{ secrets.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 }}
