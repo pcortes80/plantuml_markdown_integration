@@ -1,7 +1,6 @@
 @startuml
 TcpServerBase <|-- TcpServerCmd
 TcpServerBase <|-- TcpServerTel
-TcpServerBase <|-- TcpServerEvent
 TcpServer *-- TcpServerCmd
 TcpServer *-- TcpServerTel
 @enduml
