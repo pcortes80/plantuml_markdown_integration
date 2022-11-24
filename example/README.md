@@ -9,16 +9,6 @@ The Communication Diagram shows how internal objects interact in **TcpServer** t
 Set `plantuml:{filename}` as a fence information. `filename` is used as the file name of generated diagrams. In the following case, `md-sample-sequence.svg` is created.
 `filename` is required.
 
-```plantuml:sample-class
-@startuml
-TcpServerBase <|-- TcpServerCmd
-TcpServerBase <|-- TcpServerTel
-TcpServerBase <|-- TcpServerEvent
-TcpServerBase <|-- TcpServerEvent2
-TcpServer *-- TcpServerCmd
-TcpServer *-- TcpServerTel
-@enduml
-```
 ![](./sample-class.svg)
 
 **TcpServerCmd** is the class that handles commands and events.
